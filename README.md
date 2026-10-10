@@ -1,6 +1,6 @@
 # API de Gestión de Pólizas
 
-API REST para la gestión de pólizas de arrendamiento (individuales y colectivas), desarrollada como solución al **Módulo 2** de la prueba técnica para Desarrollador Senior TI de Seguros Bolívar.
+API REST para la gestión de pólizas de arrendamiento (individuales y colectivas)ß
 
 ## Stack técnico
 
