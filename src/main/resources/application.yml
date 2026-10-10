@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: poliza-api
+  datasource:
+    url: jdbc:h2:mem:polizadb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: false
+
+server:
+  port: 8080
+  error:
+    include-stacktrace: never
+    include-message: always
+
+# Clave de API exigida por el enunciado (header api-key).
+# En un entorno real NO iria en texto plano: provendria de Secret Manager / variable de entorno.
+app:
+  security:
+    api-key: ${API_KEY:123456}
+  # Indice de Precios al Consumidor aplicado en la renovacion (ej. 5.09% = 0.0509)
+  renovacion:
+    ipc: ${IPC:0.0509}
+
+logging:
+  level:
+    root: INFO
+    co.com.segurosbolivar.polizaapi: INFO

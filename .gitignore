@@ -1,0 +1,25 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Java
+*.class
+hs_err_pid*
